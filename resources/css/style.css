@@ -203,7 +203,6 @@ table {
  */
 body {
   background-color: #131a20;
-  background-image: url(dummy/background.jpg);
   background-position: top center;
   background-repeat: no-repeat;
   color: #84878d;
@@ -383,7 +382,7 @@ form textarea {
       display: inline-block;
       margin-left: 10px;
       margin-right: 10px;
-      background: url(images/arrow-gray.png) no-repeat; }
+      }
     .breadcrumbs a:hover {
       color: #ffaa3c; }
   .breadcrumbs span {
@@ -393,7 +392,6 @@ ul.arrow {
   list-style: none; }
   ul.arrow li {
     padding-left: 20px;
-    background: url(images/arrow.png) no-repeat 0 center;
     margin-bottom: 5px; }
     ul.arrow li a {
       color: #84878d;
@@ -1674,7 +1672,6 @@ ul.arrow {
     width: 100%;
     border: 1px solid #bec1c8;
     background-color: transparent;
-    background-image: url(images/arrow.png);
     background-repeat: no-repeat;
     background-position: right center;
     color: inherit;

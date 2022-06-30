@@ -44,7 +44,8 @@ class User extends Authenticatable
 	
 	public function isEditor()
     {
-        if($this->role == 2) return true;
+        if($this->role >= 2) return true;
 		else return false;
     }
+	
 }

@@ -26,7 +26,6 @@ class HomeController extends Controller
     public function index()
     {
 		$movieList = Movies::all();
-		$genres = Genres::all();
-        return view('home', ['Movies' => $movieList, 'Genres' => $genres]);
+        return view('home', ['Movies' => $movieList]);
     }
 }

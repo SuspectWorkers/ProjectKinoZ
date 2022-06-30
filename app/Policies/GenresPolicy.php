@@ -18,7 +18,7 @@ class GenresPolicy
      */
     public function viewAny(User $user)
     {
-        return true;
+        return $user->isEditor();
     }
 
     /**
@@ -30,7 +30,7 @@ class GenresPolicy
      */
     public function view(User $user, Genres $model)
     {
-        return true;
+        return $user->isEditor();
     }
 
     /**
@@ -41,7 +41,7 @@ class GenresPolicy
      */
     public function create(User $user)
     {
-        return true;
+        return $user->isEditor();
     }
 
     /**
@@ -53,7 +53,7 @@ class GenresPolicy
      */
     public function update(User $user, Genres $model)
     {
-        return true;
+        return $user->isEditor();
     }
 
     /**
@@ -65,7 +65,7 @@ class GenresPolicy
      */
     public function delete(User $user, Genres $model)
     {
-        return true;
+        return $user->isEditor();
     }
 
     /**
@@ -77,7 +77,7 @@ class GenresPolicy
      */
     public function deleteAny(User $user)
     {
-        return true;
+        return $user->isEditor();
     }
 
     /**

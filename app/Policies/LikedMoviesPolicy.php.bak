@@ -18,7 +18,7 @@ class LikedMoviesPolicy
      */
     public function viewAny(User $user)
     {
-        return true;
+        return $user->isEditor();
     }
 
     /**
@@ -53,7 +53,7 @@ class LikedMoviesPolicy
      */
     public function update(User $user, LikedMovies $model)
     {
-        return true;
+        return $user->isEditor();
     }
 
     /**
@@ -77,7 +77,7 @@ class LikedMoviesPolicy
      */
     public function deleteAny(User $user)
     {
-        return true;
+        return $user->isEditor();
     }
 
     /**

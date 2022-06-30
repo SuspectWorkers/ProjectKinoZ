@@ -130,7 +130,7 @@ class LikedMoviesController extends Controller
 		$user = auth()->user()->name;
 		$userid = auth()->user()->id;
 		if (auth()->user()->isUser() && $likedMovies->user_id == $userid) $likedMovies->delete();
-		else if (auth()->user()->isUser() && $likedMovies->user_id != $userid) print("error");
+		else if (auth()->user()->isUser() && $likedMovies->user_id != $users) print("error");
 		else $likedMovies->delete();
 
         return redirect()

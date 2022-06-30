@@ -18,7 +18,7 @@ class LikedMoviesPolicy
      */
     public function viewAny(User $user)
     {
-        return $user->isEditor();
+        return true;
     }
 
     /**

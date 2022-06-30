@@ -9,28 +9,21 @@
 							<div class="col-md-9">
 								<div class="slider">
 									<ul class="slides">
-										<li><a href="#"><img src="dummy/slide-1@2x.jpg" alt="Slide 1"></a></li>
-										<li><a href="#"><img src="dummy/slide-2@2x.jpg" alt="Slide 2"></a></li>
-										<li><a href="#"><img src="dummy/slide-3@2x.jpg" alt="Slide 3"></a></li>
+									<ul class="movie-schedule">
+										@foreach($Movies as $movie)
+										<li><a href="#"><img src="dummy/{{$movie->name}}.jpg" alt="{{$movie->name}}"></a></li>
+										<li>
+											<div class="date">{{$movie->date}}</div>
+											<h2 class="entry-title"><p><b>Description:</b> {{$movie->description}}</p></h2>
+											<h2 class="entry-title"><p><b>Genre: </b>@php $uss = json_decode($Genres[$movie->genres_id -1])->name; print($uss); @endphp</p></h2>
+										</li>
+										@endforeach
+									</ul>
 									</ul>
 								</div>
 							</div>
-							<div class="col-md-3">
-								<div class="row">
-									<div class="col-sm-6 col-md-12">
-										<div class="latest-movie">
-											<a href="#"><img src="dummy/thumb-1@2x.jpg" alt="Movie 1"></a>
-										</div>
-									</div>
-									<div class="col-sm-6 col-md-12">
-										<div class="latest-movie">
-											<a href="#"><img src="dummy/thumb-2@2x.jpg" alt="Movie 2"></a>
-										</div>
-									</div>
-								</div>
-							</div>
 						</div> <!-- .row -->
-						<div class="row">
+						<!--<div class="row">
 							<div class="col-sm-6 col-md-3">
 								<div class="latest-movie">
 									<a href="#"><img src="dummy/thumb-3@2x.jpg" alt="Movie 3"></a>
@@ -187,7 +180,7 @@
 						</div>
 					</div> <!-- .row -->
 
-					<div class="colophon">Copyright 2022 by dp21074 and fp21002. All rights reserved</div>
+					<div class="colophon">Copyright 2022 by dp21074 and fr21002. All rights reserved</div>
 				</div> <!-- .container -->
 
 			</footer>

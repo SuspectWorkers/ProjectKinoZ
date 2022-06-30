@@ -118,4 +118,17 @@ class MoviesController extends Controller
             ->withSuccess(__('crud.common.removed'));
     }
 	
+	public function all(Request $request)
+    {
+        $this->authorize('view-any', Movies::class);
+
+        $search = $request->get('search', '');
+
+        $allMovies = Movies::search($search)
+            ->latest()
+            ->paginate(5)
+            ->withQueryString();
+
+        return view('app.all_movies.index', compact('allMovies', 'search'));
+    }
 }

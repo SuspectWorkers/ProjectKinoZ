@@ -53,7 +53,7 @@ class CommentPolicy
      */
     public function update(User $user, Comment $model)
     {
-        return false;
+        return $user->isEditor();
     }
 
     /**
@@ -65,7 +65,7 @@ class CommentPolicy
      */
     public function delete(User $user, Comment $model)
     {
-        return true;
+        return $user->isEditor();
     }
 
     /**
@@ -77,7 +77,7 @@ class CommentPolicy
      */
     public function deleteAny(User $user)
     {
-        return true;
+        return $user->isEditor();
     }
 
     /**

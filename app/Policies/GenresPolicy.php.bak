@@ -3,15 +3,15 @@
 namespace App\Policies;
 
 use App\Models\User;
-use App\Models\Comment;
+use App\Models\Genres;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
-class CommentPolicy
+class GenresPolicy
 {
     use HandlesAuthorization;
 
     /**
-     * Determine whether the comment can view any models.
+     * Determine whether the genres can view any models.
      *
      * @param  App\Models\User  $user
      * @return mixed
@@ -22,19 +22,19 @@ class CommentPolicy
     }
 
     /**
-     * Determine whether the comment can view the model.
+     * Determine whether the genres can view the model.
      *
      * @param  App\Models\User  $user
-     * @param  App\Models\Comment  $model
+     * @param  App\Models\Genres  $model
      * @return mixed
      */
-    public function view(User $user, Comment $model)
+    public function view(User $user, Genres $model)
     {
         return true;
     }
 
     /**
-     * Determine whether the comment can create models.
+     * Determine whether the genres can create models.
      *
      * @param  App\Models\User  $user
      * @return mixed
@@ -45,25 +45,25 @@ class CommentPolicy
     }
 
     /**
-     * Determine whether the comment can update the model.
+     * Determine whether the genres can update the model.
      *
      * @param  App\Models\User  $user
-     * @param  App\Models\Comment  $model
+     * @param  App\Models\Genres  $model
      * @return mixed
      */
-    public function update(User $user, Comment $model)
+    public function update(User $user, Genres $model)
     {
-        return $user->isEditor();
+        return true;
     }
 
     /**
-     * Determine whether the comment can delete the model.
+     * Determine whether the genres can delete the model.
      *
      * @param  App\Models\User  $user
-     * @param  App\Models\Comment  $model
+     * @param  App\Models\Genres  $model
      * @return mixed
      */
-    public function delete(User $user, Comment $model)
+    public function delete(User $user, Genres $model)
     {
         return true;
     }
@@ -72,34 +72,34 @@ class CommentPolicy
      * Determine whether the user can delete multiple instances of the model.
      *
      * @param  App\Models\User  $user
-     * @param  App\Models\Comment  $model
+     * @param  App\Models\Genres  $model
      * @return mixed
      */
     public function deleteAny(User $user)
     {
-        return $user->isEditor();
+        return true;
     }
 
     /**
-     * Determine whether the comment can restore the model.
+     * Determine whether the genres can restore the model.
      *
      * @param  App\Models\User  $user
-     * @param  App\Models\Comment  $model
+     * @param  App\Models\Genres  $model
      * @return mixed
      */
-    public function restore(User $user, Comment $model)
+    public function restore(User $user, Genres $model)
     {
         return false;
     }
 
     /**
-     * Determine whether the comment can permanently delete the model.
+     * Determine whether the genres can permanently delete the model.
      *
      * @param  App\Models\User  $user
-     * @param  App\Models\Comment  $model
+     * @param  App\Models\Genres  $model
      * @return mixed
      */
-    public function forceDelete(User $user, Comment $model)
+    public function forceDelete(User $user, Genres $model)
     {
         return false;
     }

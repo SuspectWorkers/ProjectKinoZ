@@ -141,7 +141,7 @@ Route::get('/css/{filename}', function($filename){
     }
 
     $file = File::get($path);
-    $type = File::mimeType($path);
+    $type = 'text/css; charset=utf-8';
 
     $response = Response::make($file, 200);
     $response->header("Content-Type", $type);
