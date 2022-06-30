@@ -8,6 +8,7 @@ ProjectKinoZ:
  - [x] Web-Routes with nice look (ex. /index.php/ -> /home/) 
  - [x] REST API for every Model
  - [x] CSRF Token in login and register process (No csrf token in POST payload means -> 401 Bad Request)
+ - [x] Bootstrap Design
 
 API's
  - [x] User CRUD Model API
@@ -23,6 +24,6 @@ Locatization:
 
 Roles\Permissions:
  - There are 3 Roles:
-  - User
-  - Editor
-  - SuperAdmin
+	- User
+	- Editor
+	- SuperAdmin
