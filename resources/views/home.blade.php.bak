@@ -15,7 +15,7 @@
 										<li>
 											<div class="date">{{$movie->date}}</div>
 											<h2 class="entry-title"><p><b>Description:</b> {{$movie->description}}</p></h2>
-											<h2 class="entry-title"><p><b>Genre:</b>@php $uss = json_decode($Genres[$movie->genres_id -1])->name; print($uss); @endphp</p></h2>
+											<h2 class="entry-title"><p><b>Genre: </b>@php $uss = json_decode($Genres[$movie->genres_id])->name; print($uss); @endphp</p></h2>
 										</li>
 										@endforeach
 									</ul>
