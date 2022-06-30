@@ -29,5 +29,5 @@ Roles\Permissions:
 	- SuperAdmin
 	
 Database Model:
- ![alt text](https://github.com/SuspectWorkers/ProjectKinoZ/blob/main/db_model.jpg?raw=true)
+ ![alt text](https://github.com/SuspectWorkers/ProjectKinoZ/blob/main/db_model.png?raw=true)
 

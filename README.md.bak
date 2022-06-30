@@ -27,3 +27,7 @@ Roles\Permissions:
 	- User
 	- Editor
 	- SuperAdmin
+	
+Database Model:
+ ![alt text](https://github.com/SuspectWorkers/ProjectKinoZ/blob/main/db_model.jpg?raw=true)
+
